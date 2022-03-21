@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] Transform Tplayer;
     private float zRot;
-    private float xPush;
+    private float yPush;
 
     void Start()
     {
@@ -26,9 +26,12 @@ public class PlayerMovement : MonoBehaviour
     {
         // Movement Variables
         float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
         Vector2 turn = new Vector2(moveX, 0.0f);
-        Vector2 push = new Vector2(0.0f, moveY);
+
+        // Moves player forward and backwards
+        yPush = Input.GetAxisRaw("Vertical") * Time.deltaTime * speed;
+
+        transform.Translate(0.0f, yPush, 0.0f);
 
         // Changes player rotation
         if (turn.x == 1)
@@ -44,17 +47,6 @@ public class PlayerMovement : MonoBehaviour
 
         Tplayer.rotation = Quaternion.Euler(0, 0, zRot);
 
-        // Moves player forward and backwards
-        if (push.y == 1)
-        {
-            Debug.Log("pressed up");
-            Tplayer.position += Vector3.forward * Time.deltaTime * speed;
-        }
-
-        if (push.y == -1)
-        {
-            Debug.Log("pressed down");
-            Tplayer.position -= Vector3.forward * Time.deltaTime * speed;
-        }
+        
     }
 }
