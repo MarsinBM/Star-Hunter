@@ -301,6 +301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0546b80f3adb65d43b64f9c0010b1999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnspeed: 30
+  turnspeed: 100
   speed: 0
   Tplayer: {fileID: 1342506917}
