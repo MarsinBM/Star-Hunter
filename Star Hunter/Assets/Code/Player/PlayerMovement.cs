@@ -6,10 +6,11 @@ public class PlayerMovement : MonoBehaviour
 {
     // Variables
     [SerializeField] float turnspeed;
-    [SerializeField] float speed;
+    [SerializeField] float accelspeed;
+    [SerializeField] float maxspeed;
+
     [SerializeField] Transform Tplayer;
-    private float zRot;
-    private float yPush;
+    [SerializeField] Rigidbody2D Rplayer;
 
     void Start()
     {
@@ -20,33 +21,50 @@ public class PlayerMovement : MonoBehaviour
     {
         movement();
     }
+    void FixedUpdate()
+    {
+        
+    }
 
     // Controls player movement
     void movement()
     {
         // Movement Variables
         float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
         Vector2 turn = new Vector2(moveX, 0.0f);
+        Vector2 push = new Vector2(0.0f, moveY);
 
         // Moves player forward and backwards
-        yPush = Input.GetAxisRaw("Vertical") * Time.deltaTime * speed;
+        if (push.y == 1)
+        {
+            Rplayer.AddRelativeForce(Vector2.up * Time.deltaTime * accelspeed);
+        }
 
-        transform.Translate(0.0f, yPush, 0.0f);
+        if (push.y == -1)
+        {
+            Rplayer.AddRelativeForce(Vector2.up * Time.deltaTime * -accelspeed);
+        }
+
+        if (Rplayer.velocity.magnitude > maxspeed)
+        {
+            Rplayer.velocity = Rplayer.velocity.normalized * maxspeed;
+        }
 
         // Changes player rotation
         if (turn.x == 1)
         {
-            //Debug.Log("pressed right");
-            zRot += -Time.deltaTime * turnspeed; 
+            Rplayer.angularVelocity = -turnspeed;
         }
         if (turn.x == -1)
         {
-            //Debug.Log("pressed left");
-            zRot += Time.deltaTime * turnspeed;
+           
+            Rplayer.angularVelocity = turnspeed;
+        }
+        if (turn.x == 0)
+        {
+            Rplayer.angularVelocity = 0;
         }
 
-        Tplayer.rotation = Quaternion.Euler(0, 0, zRot);
-
-        
     }
 }
