@@ -19,11 +19,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        movement();
+        movement();  
     }
     void FixedUpdate()
     {
-        
+        freezeship();
     }
 
     // Controls player movement
@@ -65,6 +65,15 @@ public class PlayerMovement : MonoBehaviour
         {
             Rplayer.angularVelocity = 0;
         }
-
     }
+
+    // Controls the stopping of the ship
+    void freezeship()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Rplayer.velocity = Vector2.Lerp(Rplayer.velocity, Vector2.zero, Time.deltaTime * 1);
+        }
+    }
+
 }

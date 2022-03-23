@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0546b80f3adb65d43b64f9c0010b1999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnspeed: 160
+  turnspeed: 240
   accelspeed: 240
   maxspeed: 8
   Tplayer: {fileID: 714569072596166492}
