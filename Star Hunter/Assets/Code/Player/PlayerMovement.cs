@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform Tplayer;
     [SerializeField] Rigidbody2D Rplayer;
 
+    [SerializeField] Transform firepoint;
+    [SerializeField] GameObject projectile;
+
     void Start()
     {
         //Application.targetFrameRate = 15;
@@ -19,7 +22,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        movement();  
+        movement();
+        raycast();
+        shoot();
     }
     void FixedUpdate()
     {
@@ -73,6 +78,22 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             Rplayer.velocity = Vector2.Lerp(Rplayer.velocity, Vector2.zero, Time.deltaTime * 1);
+        }
+    }
+
+    // Temporary raycast
+    void raycast()
+    {
+        RaycastHit2D shoot = Physics2D.Raycast(Rplayer.position, transform.TransformDirection(Vector2.up), 15f);
+        Debug.DrawRay(Rplayer.position, transform.TransformDirection(Vector2.up) * 15f, Color.red);
+    }
+
+    // Allows player to shoot projectile
+    void shoot()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Instantiate(projectile, firepoint.position, Tplayer.rotation);
         }
     }
 

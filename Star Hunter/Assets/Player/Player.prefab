@@ -102,6 +102,8 @@ MonoBehaviour:
   maxspeed: 8
   Tplayer: {fileID: 714569072596166492}
   Rplayer: {fileID: 714569072596166494}
+  firepoint: {fileID: 0}
+  projectile: {fileID: 3760691260788152566, guid: c1302183688e135449ebaa2624fa916f, type: 3}
 --- !u!68 &714569072596166481
 EdgeCollider2D:
   m_ObjectHideFlags: 0
