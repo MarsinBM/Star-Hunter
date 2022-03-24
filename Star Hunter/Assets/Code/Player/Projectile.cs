@@ -5,7 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     // Variables
-    private float TimetoDestory = 5.0f;
+    private float TimetoDestory = 4.5f;
     [SerializeField] float speed;
     [SerializeField] Rigidbody2D projectile;
     [SerializeField] GameObject player;

@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform firepoint;
     [SerializeField] GameObject projectile;
 
+    private bool Isfiring;
+    private float cooldown = 0.25f;
+
     void Start()
     {
         //Application.targetFrameRate = 15;
@@ -91,9 +94,20 @@ public class PlayerMovement : MonoBehaviour
     // Allows player to shoot projectile
     void shoot()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKey(KeyCode.Z) && Isfiring == false)
         {
             Instantiate(projectile, firepoint.position, Tplayer.rotation);
+            Isfiring = true;
+        }
+
+        if (Isfiring == true && cooldown > 0)
+        {
+            cooldown -= Time.deltaTime;
+            if(cooldown <= 0)
+            {
+                Isfiring = false;
+                cooldown = 0.25f;
+            }
         }
     }
 
