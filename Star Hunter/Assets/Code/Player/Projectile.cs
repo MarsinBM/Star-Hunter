@@ -31,4 +31,15 @@ public class Projectile : MonoBehaviour
     {
         projectile.AddRelativeForce(Vector2.up * Time.deltaTime * speed);
     }
+
+    // Projectile gets destroyed on collision
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("pbullet"))
+        {
+            Physics2D.IgnoreCollision(projectile.GetComponent<Collider2D>(), projectile.GetComponent<Collider2D>());
+        }
+        else
+        Destroy(gameObject);
+    }
 }

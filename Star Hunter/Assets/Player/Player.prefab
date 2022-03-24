@@ -104,7 +104,6 @@ MonoBehaviour:
   Rplayer: {fileID: 714569072596166494}
   firepoint: {fileID: 0}
   projectile: {fileID: 3760691260788152566, guid: c1302183688e135449ebaa2624fa916f, type: 3}
-  cooldown: 5
 --- !u!68 &714569072596166481
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -154,5 +153,5 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
