@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnspeed: 240
   accelspeed: 240
-  maxspeed: 8
+  maxspeed: 15
   Tplayer: {fileID: 714569072596166492}
   Rplayer: {fileID: 714569072596166494}
   firepoint: {fileID: 0}
