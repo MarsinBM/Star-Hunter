@@ -56,10 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Code\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Code\Player\Player.cs" />
     <Compile Include="Assets\Code\Enemies\enemy1.cs" />
     <Compile Include="Assets\Code\Player\Projectile.cs" />
     <Compile Include="Assets\Code\Enemies\enemy2.cs" />
+    <Compile Include="Assets\Code\Enemies\alarm.cs" />
+    <Compile Include="Assets\Code\Enemies\eHPbar1.cs" />
+    <Compile Include="Assets\Code\Enemies\eHPbar2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

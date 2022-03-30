@@ -15,6 +15,8 @@ public class enemy1 : MonoBehaviour
     float TTI = 10;
     private bool leftvision;
 
+    public int health = 2;
+
     void Start()
     {
         idle = true;
@@ -25,6 +27,11 @@ public class enemy1 : MonoBehaviour
     {
         Idle();
         chase();
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Handles how the enemy acts when it's idle
@@ -83,6 +90,14 @@ public class enemy1 : MonoBehaviour
         else if (idle == false)
         {
             leftvision = true;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("pbullet"))
+        {
+            health -= 1;
         }
     }
 }

@@ -14,12 +14,14 @@ public class enemy2 : MonoBehaviour
     [SerializeField] Transform enemy;
     [SerializeField] Transform player;
 
-    private bool idle;
+    public int health = 5;
+
+    public bool idle;
     private bool attacking;
     
     void Start()
     {
-        idle = false;
+        idle = true;
         attacking = false;
     }
 
@@ -29,6 +31,11 @@ public class enemy2 : MonoBehaviour
         attack();
         chase();
         Idle();
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Handles how the enemy acts when it's idle
@@ -46,7 +53,7 @@ public class enemy2 : MonoBehaviour
         }
 
         float distance = Vector2.Distance(enemy.position, player.position);
-        if (distance < attackdistance)
+        if (distance < attackdistance && idle != true)
         {
             attacking = true;
         }
@@ -62,6 +69,20 @@ public class enemy2 : MonoBehaviour
             enemy.RotateAround(player.position, zAxis, orbitspeed * Time.deltaTime);
             enemy.position = (enemy.position - player.position).normalized * distbplayer + player.position;
         }
+        // PROJECTILE SHOT AT PLAYER AT AN INTERVAL
         
+    }
+
+    // Handles the collision detection
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("pbullet"))
+        {
+            health -= 1;
+        }
+        else if (collision.gameObject.CompareTag("enemy"))
+        {
+            Physics2D.IgnoreCollision(enemy.GetComponent<Collider2D>(), enemy.GetComponent<Collider2D>());
+        }
     }
 }
