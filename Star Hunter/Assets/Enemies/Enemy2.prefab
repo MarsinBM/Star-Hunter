@@ -102,6 +102,7 @@ MonoBehaviour:
   attackdistance: 5
   enemy: {fileID: 3255018329413297316}
   player: {fileID: 0}
+  ebullet: {fileID: 5813771764499423430, guid: 44025db7aa50fd34dbb9ec55f0e9eae2, type: 3}
   health: 5
   idle: 0
 --- !u!58 &5550034171830214242

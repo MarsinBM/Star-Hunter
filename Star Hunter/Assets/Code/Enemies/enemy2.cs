@@ -14,6 +14,9 @@ public class enemy2 : MonoBehaviour
     [SerializeField] Transform enemy;
     [SerializeField] Transform player;
 
+    [SerializeField] GameObject ebullet;
+    private float cooldown = 1;
+
     Quaternion rotation;
 
     public int health = 5;
@@ -76,9 +79,13 @@ public class enemy2 : MonoBehaviour
         {
             enemy.RotateAround(player.position, zAxis, orbitspeed * Time.deltaTime);
             enemy.position = (enemy.position - player.position).normalized * distbplayer + player.position;
-        }
-        // PROJECTILE SHOT AT PLAYER AT AN INTERVAL
-        
+            cooldown -= Time.deltaTime;
+            if (cooldown <= 0)
+            {
+                Instantiate(ebullet, enemy.position, enemy.rotation);
+                cooldown = 1;
+            }
+        } 
     }
 
     // Handles the collision detection

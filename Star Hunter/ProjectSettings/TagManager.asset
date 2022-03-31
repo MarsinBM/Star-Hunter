@@ -6,6 +6,7 @@ TagManager:
   tags:
   - pbullet
   - enemy
+  - ebullet
   layers:
   - Default
   - TransparentFX

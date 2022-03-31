@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -33,7 +34,9 @@ public class Player : MonoBehaviour
 
         if (health <= 0)
         {
-            // TRIGGER DEATH SEQUENCE
+            // TRIGGER DEATH SEQUENCE (for now the scene will be reloaded)
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
         }
     }
     void FixedUpdate()
