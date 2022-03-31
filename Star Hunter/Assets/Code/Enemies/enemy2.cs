@@ -14,6 +14,8 @@ public class enemy2 : MonoBehaviour
     [SerializeField] Transform enemy;
     [SerializeField] Transform player;
 
+    Quaternion rotation;
+
     public int health = 5;
 
     public bool idle;
@@ -23,6 +25,7 @@ public class enemy2 : MonoBehaviour
     {
         idle = true;
         attacking = false;
+        rotation = transform.rotation;
     }
 
     
@@ -36,6 +39,11 @@ public class enemy2 : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void LateUpdate()
+    {
+        transform.rotation = rotation;
     }
 
     // Handles how the enemy acts when it's idle

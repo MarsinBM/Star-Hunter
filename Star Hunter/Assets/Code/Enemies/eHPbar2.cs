@@ -9,9 +9,12 @@ public class eHPbar2 : MonoBehaviour
 
     private Vector3 localScale;
 
+    Quaternion rotation;
+
     void Start()
     {
         localScale = transform.localScale;
+        rotation = transform.rotation;
     }
 
     void Update()
@@ -19,5 +22,10 @@ public class eHPbar2 : MonoBehaviour
         enemy2 escript = enemyTWO.GetComponent<enemy2>();
         localScale.x = escript.health;
         transform.localScale = localScale;
+    }
+
+    void LateUpdate()
+    {
+        transform.rotation = rotation;
     }
 }

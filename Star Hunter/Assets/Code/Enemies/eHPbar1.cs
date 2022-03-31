@@ -8,10 +8,13 @@ public class eHPbar1 : MonoBehaviour
     [SerializeField] GameObject enemyONE;
 
     private Vector3 localScale;
+
+    Quaternion rotation;
     
     void Start()
     {
         localScale = transform.localScale;
+        rotation = transform.rotation;
     }
 
     void Update()
@@ -19,6 +22,10 @@ public class eHPbar1 : MonoBehaviour
         enemy1 escript = enemyONE.GetComponent<enemy1>();
         localScale.x = escript.health;
         transform.localScale = localScale;
-        // ROTATION NEEDS TO BE FIXED IN PLACE SO IT DOESNT ROTATE WITH OBJECT
+    }
+
+    void LateUpdate()
+    {
+        transform.rotation = rotation;
     }
 }
