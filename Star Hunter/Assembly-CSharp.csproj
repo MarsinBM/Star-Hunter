@@ -58,13 +58,14 @@
   <ItemGroup>
     <Compile Include="Assets\Code\Enemies\eHPbar2.cs" />
     <Compile Include="Assets\Code\Player\Player.cs" />
+    <Compile Include="Assets\Code\Levels\Camera.cs" />
     <Compile Include="Assets\Code\Enemies\alarm.cs" />
     <Compile Include="Assets\Code\Enemies\enemy1.cs" />
     <Compile Include="Assets\Code\Player\Projectile.cs" />
     <Compile Include="Assets\Code\Enemies\eHPbar1.cs" />
     <Compile Include="Assets\Code\Enemies\enemy2.cs" />
-    <Compile Include="Assets\Code\Levels\Camera.cs" />
     <Compile Include="Assets\Code\Enemies\eProjectile.cs" />
+    <Compile Include="Assets\Code\Levels\BackgroundScroll.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
