@@ -11,7 +11,7 @@ public class enemy1 : MonoBehaviour
     [SerializeField] Rigidbody2D enemy;
     [SerializeField] Rigidbody2D player;
 
-    private bool idle;
+    public bool idle;
     float TTI = 10;
     private bool leftvision;
 
@@ -95,7 +95,7 @@ public class enemy1 : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("pbullet"))
+        if (collision.gameObject.CompareTag("pbullet") && idle != true)
         {
             health -= 1;
         }

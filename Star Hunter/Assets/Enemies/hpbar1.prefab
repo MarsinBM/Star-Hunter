@@ -96,3 +96,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyONE: {fileID: 0}
+  hpbar: {fileID: 5696659833663426313}
