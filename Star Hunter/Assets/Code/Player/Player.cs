@@ -19,7 +19,9 @@ public class Player : MonoBehaviour
     private bool Isfiring;
     private float cooldown = 0.25f;
 
-    private int health = 5;
+    public int health = 5;
+
+    public int score = 000;
 
     void Start()
     {
@@ -127,6 +129,16 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("enemy") || collision.gameObject.CompareTag("ebullet"))
         {
             health -= 1;
+        }
+    }
+
+    // Players collision detection for score
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("score"))
+        {
+            score += 1;
+            Destroy(other.gameObject);
         }
     }
 

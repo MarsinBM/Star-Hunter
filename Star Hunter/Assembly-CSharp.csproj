@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Code\Enemies\eHPbar2.cs" />
+    <Compile Include="Assets\Code\Levels\Foreground.cs" />
     <Compile Include="Assets\Code\Player\Player.cs" />
     <Compile Include="Assets\Code\Levels\PlayerCamera.cs" />
     <Compile Include="Assets\Code\Enemies\alarm.cs" />
@@ -66,7 +67,9 @@
     <Compile Include="Assets\Code\Levels\BackgroundScroll.cs" />
     <Compile Include="Assets\Code\Enemies\enemy2.cs" />
     <Compile Include="Assets\Code\Enemies\eProjectile.cs" />
-    <Compile Include="Assets\Code\Levels\Foreground.cs" />
+    <Compile Include="Assets\Code\UI\HealthBar.cs" />
+    <Compile Include="Assets\Code\UI\Score.cs" />
+    <Compile Include="Assets\Code\Items\Spin.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -725,18 +728,6 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.003">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.003.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VectorGraphics">
-      <HintPath>Library\ScriptAssemblies\Unity.VectorGraphics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEngineBridge.003">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.003.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VectorGraphics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VectorGraphics.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
