@@ -9,6 +9,7 @@ TagManager:
   - ebullet
   - debris
   - score
+  - health
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - MiniMap
+  - ignore
   - 
   - 
   - 

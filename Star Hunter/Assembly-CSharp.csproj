@@ -56,7 +56,10 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Code\Items\Spin.cs" />
+    <Compile Include="Assets\Code\UI\HealthBar.cs" />
     <Compile Include="Assets\Code\Enemies\eHPbar2.cs" />
+    <Compile Include="Assets\Code\UI\Score.cs" />
     <Compile Include="Assets\Code\Levels\Foreground.cs" />
     <Compile Include="Assets\Code\Player\Player.cs" />
     <Compile Include="Assets\Code\Levels\PlayerCamera.cs" />
@@ -67,9 +70,6 @@
     <Compile Include="Assets\Code\Levels\BackgroundScroll.cs" />
     <Compile Include="Assets\Code\Enemies\enemy2.cs" />
     <Compile Include="Assets\Code\Enemies\eProjectile.cs" />
-    <Compile Include="Assets\Code\UI\HealthBar.cs" />
-    <Compile Include="Assets\Code\UI\Score.cs" />
-    <Compile Include="Assets\Code\Items\Spin.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

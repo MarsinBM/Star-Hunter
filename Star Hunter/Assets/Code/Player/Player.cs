@@ -140,6 +140,11 @@ public class Player : MonoBehaviour
             score += 1;
             Destroy(other.gameObject);
         }
+        if (other.gameObject.CompareTag("health"))
+        {
+            health = 5;
+            Destroy(other.gameObject);
+        }
     }
 
 }
