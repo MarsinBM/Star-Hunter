@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1007
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 68743
+  controlID: 5058
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 68744
+  controlID: 5059
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 68745
+  controlID: 5060
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -220,12 +220,12 @@ MonoBehaviour:
     height: 522
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
   - {fileID: 14}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -396,9 +396,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: d2490000
       m_LastClickedID: 0
-      m_ExpandedIDs: 9a94fffffa94ffffe0f3ffff94f4fffff6f5ffff40f8ffff50f8ffff44fbffff
+      m_ExpandedIDs: 7c0afeff101afeff382afeff9839feffc049feff2059feff4869feffa878feffe088feff4a98feff50a9fefff0b8fefffac9feff96d9feff3cebfefff0fafefffe0bffff521cfffff057ffffe8c6ffffb2d6ffffb4eaffff44fbffff744a0000964c0000f04c0000924d0000fe4d0000a64e00002c4f0000445c0000e4730000129e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -414,7 +414,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 10}
+        m_ClientGUIView: {fileID: 9}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -458,9 +458,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 624.8371, y: 130.63838, z: -7016.5327}
+    m_Target: {x: 618.255, y: 68.502335, z: -12510.219}
     speed: 2
-    m_Value: {x: 603.78613, y: 128.20161, z: -7014.915}
+    m_Value: {x: 596.37476, y: 70.783966, z: -12508.82}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -511,9 +511,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 375.67593
+    m_Target: 324.70032
     speed: 2
-    m_Value: 359.4985
+    m_Value: 310.71802
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -576,13 +576,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Levels
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Levels
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\marxx\Dokumenty\Desktop\Apps & Folders\Folders\Y2S2
     Game Project\Star-Hunter\Star Hunter
@@ -590,9 +590,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ca430000
-    m_LastClickedID: 17354
-    m_ExpandedIDs: 00000000aa430000be430000c443000000ca9a3b
+    m_SelectedIDs: a4490000
+    m_LastClickedID: 18852
+    m_ExpandedIDs: 00000000864900008c49000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -620,7 +620,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000aa430000c443000000ca9a3b
+    m_ExpandedIDs: 00000000864900008c49000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -647,7 +647,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300006642000010430000565d0000ac420000ec42000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
