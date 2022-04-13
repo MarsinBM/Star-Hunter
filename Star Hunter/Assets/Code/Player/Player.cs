@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     [SerializeField] Transform firepoint;
     [SerializeField] GameObject projectile;
 
+    private bool dead = false;
+
     private bool Isfiring;
     private float cooldown = 0.25f;
 
@@ -23,27 +25,37 @@ public class Player : MonoBehaviour
 
     public int score = 000;
 
+    public SpriteRenderer players;
+
     void Start()
     {
+        // FOR TESTING AT LOW FRAMERATES
         //Application.targetFrameRate = 15;
     }
 
     void Update()
     {
-        movement();
-        raycast();
-        shoot();
-
+        if (dead != true)
+        {
+            movement();
+            shoot();
+        }
+        
         if (health <= 0)
         {
-            // TRIGGER DEATH SEQUENCE (for now the scene will be reloaded)
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
+            //Destroy(gameObject);
+            colorchange();
+            FindObjectOfType<LevelManager>().calldeath();
+            dead = true;
         }
     }
     void FixedUpdate()
     {
-        freezeship();
+        if (dead != true)
+        {
+            freezeship();
+        }
+        
     }
 
     // Controls player movement
@@ -96,13 +108,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Temporary raycast
-    void raycast()
-    {
-        RaycastHit2D shoot = Physics2D.Raycast(Rplayer.position, transform.TransformDirection(Vector2.up), 15f);
-        Debug.DrawRay(Rplayer.position, transform.TransformDirection(Vector2.up) * 15f, Color.red);
-    }
-
     // Allows player to shoot projectile
     void shoot()
     {
@@ -121,6 +126,12 @@ public class Player : MonoBehaviour
                 cooldown = 0.25f;
             }
         }
+    }
+
+    // Changes players color depending on health
+    void colorchange()
+    {  
+        players.color = new Color32(75, 75, 75, 255);
     }
 
     // Players collision detection for health
