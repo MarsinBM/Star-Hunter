@@ -74,6 +74,9 @@
     <Compile Include="Assets\Code\Levels\BackgroundScroll.cs" />
     <Compile Include="Assets\Code\Enemies\enemy2.cs" />
     <Compile Include="Assets\Code\Enemies\eProjectile.cs" />
+    <Compile Include="Assets\Code\UI\Controls.cs" />
+    <Compile Include="Assets\Code\Levels\WarpGate.cs" />
+    <Compile Include="Assets\Code\UI\Win.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

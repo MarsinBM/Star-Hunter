@@ -11,7 +11,6 @@ public class Score : MonoBehaviour
 
     void Update()
     {
-        Player scorescript = player.GetComponent<Player>();
-        score.text = scorescript.score.ToString();
+        score.text = Player.score.ToString();
     }
 }

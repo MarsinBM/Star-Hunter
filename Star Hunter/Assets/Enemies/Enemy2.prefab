@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053e11228cd6755408317611e4d6f976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
   orbitspeed: 100
   distbplayer: 5
   attackdistance: 5

@@ -98,6 +98,7 @@ public class enemy1 : MonoBehaviour
         if (collision.gameObject.CompareTag("pbullet") && idle != true)
         {
             health -= 1;
+            Physics2D.IgnoreCollision(enemy.GetComponent<Collider2D>(), enemy.GetComponent<Collider2D>());
         }
     }
 }

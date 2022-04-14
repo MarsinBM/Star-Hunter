@@ -23,7 +23,8 @@ public class Player : MonoBehaviour
 
     public int health = 5;
 
-    public int score = 000;
+    public static int score = 0;
+    public static int totalscore;
 
     public SpriteRenderer players;
 
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour
     {
         // FOR TESTING AT LOW FRAMERATES
         //Application.targetFrameRate = 15;
+        totalscore = score;
     }
 
     void Update()

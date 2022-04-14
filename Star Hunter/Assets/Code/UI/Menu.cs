@@ -61,6 +61,7 @@ public class Menu : MonoBehaviour
     void Play()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Player.score = 0;
     }
     
     void Controls()

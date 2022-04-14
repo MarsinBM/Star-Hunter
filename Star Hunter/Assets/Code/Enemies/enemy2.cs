@@ -15,7 +15,7 @@ public class enemy2 : MonoBehaviour
     [SerializeField] Transform player;
 
     [SerializeField] GameObject ebullet;
-    private float cooldown = 1;
+    private float cooldown = 2.7f;
 
     Quaternion rotation;
 
@@ -83,7 +83,7 @@ public class enemy2 : MonoBehaviour
             if (cooldown <= 0)
             {
                 Instantiate(ebullet, enemy.position, enemy.rotation);
-                cooldown = 1;
+                cooldown = 2.7f;
             }
         } 
     }

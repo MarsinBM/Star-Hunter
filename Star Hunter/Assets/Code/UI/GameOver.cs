@@ -21,11 +21,13 @@ public class GameOver : MonoBehaviour
     {
         //Debug.Log("restart");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Player.score = Player.totalscore;
     }
 
     void Quit()
     {
         //Debug.Log("quit");
         SceneManager.LoadScene("MainMenu");
+        Player.score = 0;
     }
 }
