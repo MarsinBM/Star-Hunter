@@ -139,6 +139,7 @@ MonoBehaviour:
   maxspeed: 12
   enemy: {fileID: 2861655492279658014}
   player: {fileID: 0}
+  enmyCOL: {fileID: 2861655492279658013}
   idle: 0
   health: 2
 --- !u!58 &2861655492279658008

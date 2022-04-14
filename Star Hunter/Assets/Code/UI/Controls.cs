@@ -8,6 +8,8 @@ public class Controls : MonoBehaviour
 {
     // Variables
     [SerializeField] Button toMenu;
+
+    [SerializeField] AudioSource click;
     
     void Start()
     {
@@ -18,5 +20,6 @@ public class Controls : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
         Player.score = 0;
+        click.Play();
     }
 }

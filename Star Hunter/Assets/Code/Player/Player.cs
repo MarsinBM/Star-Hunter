@@ -28,6 +28,9 @@ public class Player : MonoBehaviour
 
     public SpriteRenderer players;
 
+    [SerializeField] AudioSource shot;
+    [SerializeField] AudioSource collect;
+
     void Start()
     {
         // FOR TESTING AT LOW FRAMERATES
@@ -115,6 +118,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Z) && Isfiring == false)
         {
+            shot.Play();
             Instantiate(projectile, firepoint.position, Tplayer.rotation);
             Isfiring = true;
         }
@@ -152,11 +156,13 @@ public class Player : MonoBehaviour
         {
             score += 1;
             Destroy(other.gameObject);
+            collect.Play();
         }
         if (other.gameObject.CompareTag("health"))
         {
             health = 5;
             Destroy(other.gameObject);
+            collect.Play();
         }
     }
 

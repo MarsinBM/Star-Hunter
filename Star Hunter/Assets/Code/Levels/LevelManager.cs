@@ -9,10 +9,13 @@ public class LevelManager : MonoBehaviour
     private bool GameEnded = false;
     public GameOver GameOver;
 
+    [SerializeField] AudioSource die;
+
     public void calldeath()
     {
         if (GameEnded == false)
         {
+            die.Play();
             Debug.Log("death sequence");
             GameOver.OnDeath();
             GameEnded = true;

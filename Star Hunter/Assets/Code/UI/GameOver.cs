@@ -10,6 +10,8 @@ public class GameOver : MonoBehaviour
     [SerializeField] Button restart;
     [SerializeField] Button quit;
 
+    [SerializeField] AudioSource click;
+
     public void OnDeath()
     {
         gameObject.SetActive(true);
@@ -22,6 +24,7 @@ public class GameOver : MonoBehaviour
         //Debug.Log("restart");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Player.score = Player.totalscore;
+        click.Play();
     }
 
     void Quit()
@@ -29,5 +32,6 @@ public class GameOver : MonoBehaviour
         //Debug.Log("quit");
         SceneManager.LoadScene("MainMenu");
         Player.score = 0;
+        click.Play();
     }
 }

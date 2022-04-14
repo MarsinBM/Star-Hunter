@@ -11,6 +11,8 @@ public class enemy1 : MonoBehaviour
     [SerializeField] Rigidbody2D enemy;
     [SerializeField] Rigidbody2D player;
 
+    [SerializeField] Collider2D enmyCOL;
+
     public bool idle;
     float TTI = 10;
     private bool leftvision;
@@ -40,6 +42,7 @@ public class enemy1 : MonoBehaviour
         if (idle == true)
         {
             enemy.velocity = Vector2.Lerp(enemy.velocity, Vector2.zero, Time.deltaTime * 1);
+            enmyCOL.enabled = false;
         }
     }
 
@@ -48,6 +51,7 @@ public class enemy1 : MonoBehaviour
     {
         if (idle != true)
         {
+            enmyCOL.enabled = true;
             enemy.AddForce((player.position - enemy.position) * Time.deltaTime * speed);
 
             if (enemy.velocity.magnitude > maxspeed)
@@ -98,7 +102,6 @@ public class enemy1 : MonoBehaviour
         if (collision.gameObject.CompareTag("pbullet") && idle != true)
         {
             health -= 1;
-            Physics2D.IgnoreCollision(enemy.GetComponent<Collider2D>(), enemy.GetComponent<Collider2D>());
         }
     }
 }

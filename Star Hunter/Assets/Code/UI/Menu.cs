@@ -18,6 +18,8 @@ public class Menu : MonoBehaviour
     [SerializeField] Button controls;
     [SerializeField] Button quit;
 
+    [SerializeField] AudioSource click;
+
     void Start()
     {
         play.onClick.AddListener(Play);
@@ -62,15 +64,18 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Player.score = 0;
+        click.Play();
     }
     
     void Controls()
     {
         SceneManager.LoadScene("Controls");
+        click.Play();
     }
     
     void Quit()
     {
         Application.Quit();
+        click.Play();
     }
 }
