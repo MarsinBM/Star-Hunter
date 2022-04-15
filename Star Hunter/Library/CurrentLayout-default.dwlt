@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1920
     height: 1007
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 1007
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -120,9 +120,9 @@ MonoBehaviour:
     width: 1920
     height: 957
   m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 946
+  controlID: 1395
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,10 +144,10 @@ MonoBehaviour:
     y: 0
     width: 1487
     height: 957
-  m_MinSize: {x: 403, y: 492}
+  m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 947
+  controlID: 1396
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,10 +169,10 @@ MonoBehaviour:
     y: 0
     width: 1487
     height: 522
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 948
+  controlID: 1397
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_MaximizeOnPlay: 0
+  m_MaximizeOnPlay: 1
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
@@ -396,9 +396,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8e430000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 3c60feffb271fefff471feff9281feffbe81feffa095feff38a5feff64a5feff36a9feff56a9feff66a9feff84a9feff9ea9feffdea9feff08aafeff28aafeff48aafeff8aaafeffa4aafeffd4aafeffeeaafeff0eabfeff1eabfeff2eabfeff68abfeff80abfeff98abfeffb0abfefff6abfeff1eacfeff2eacfeff48acfeff8aacfeffceacfeffdeacfeff2cadfeff56adfeff92adfeffc2adfeffd2adfeffecadfeff06aefeff4eaefeff5eaefeff96aefeffceaefeff16affeff26affeff4aaffeff7caffeff94affeffb4affeffc4affefffaaffeff0ab0feff26b0feff4eb0feff6cb0feff7cb0feffacb0feffbcb0feffeab0feff20b1feff30b1feff52b1feff70b1feff8ab1feff9ab1feffaab1feffb8b1feffc8b1feffe0b1fefff0b1feff00b2feff54b2feff76b2feff86b2feff9eb2feffaeb2feffbeb2feffceb2feffe6b2fefffeb2feff0eb3feff1eb3feff2eb3feff4eb3feff5eb3feff6eb3feff7eb3feff96b3fefff2b3feff18b4feff40b4feff48b4feff68b4feff80b4feffaab4feffc2b4feffd2b4feffeab4feff02b5feff6ab5feff80b5feffa8b5feffc8b5feffdeb5feff04b6feff24b6feff34b6feff44b6feff54b6feff76b6feff86b6feffa6b6feffc6b6feffd6b6feffe6b6feff06b7feff16b7feff34b7feff54b7feff86b7feffcab7feffe2b7feff24b8feff66b8feff80b8feffb8b8feffd0b8feffe8b8fefffeb8feff20b9feff44b9feff54b9feff74b9feff76b9feffd6b9feffeeb9feffbebafeffc4bafeff16cbfeff22cbfeff3ecbfeff0edffeff4a00ffff3c6dffff6c6effffb280ffffd891ffff86a4ffff0ca5ffffdaa9ffff10bbffff18d5ffff1ef5ffff4efaffff44fbffff66430100126b0200cc1e0300de1e0300041f03000e1f0300541f03006a1f0300781f0300801f0300a41f0300b41f0300c81f030038200300f22003008c21030096210300a2210300e2210300fc2103002e220300642203008a2203008e220300c8220300de220300e42203003e230300502303006c2303007e23030096230300a4230300042403000e2403001e2403003a240300402403006a240300ac240300c8240300e4240300fc24030008250300322503005c250300182f0300
+      m_SelectedIDs: 1abd0000
+      m_LastClickedID: 48410
+      m_ExpandedIDs: 4468ffff5c68ffff2c69ffff3269ffff8479ffff2c89ffff3489ffff8e91ffff3ea2ffff6cd5ffff98d6ffffd4d6ffff6ce6ffff16faffff9afaffff44fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -458,9 +458,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 505.37112, y: 84.69869, z: -378.40256}
+    m_Target: {x: 332.84943, y: 110.05146, z: -714.33276}
     speed: 2
-    m_Value: {x: 489.18585, y: 79.70594, z: -377.09128}
+    m_Value: {x: 332.84943, y: 110.05146, z: -714.33276}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -511,9 +511,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 304.5089
+    m_Target: 296.5911
     speed: 2
-    m_Value: 291.3961
+    m_Value: 296.5911
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -576,13 +576,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Sprites
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Sprites
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\marxx\Dokumenty\Desktop\Apps & Folders\Folders\Y2S2
     Game Project\Star-Hunter\Star Hunter
@@ -590,9 +590,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 50430000
-    m_LastClickedID: 17232
-    m_ExpandedIDs: 00000000344300004043000000ca9a3b
+    m_SelectedIDs: 34430000
+    m_LastClickedID: 17204
+    m_ExpandedIDs: 00000000144300002043000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -620,7 +620,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003443000000ca9a3b
+    m_ExpandedIDs: 000000001443000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -648,7 +648,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300006642000010430000565d0000ac420000ec4200006c49000000000000
+    m_ExpandedInstanceIDs: c62300006642000010430000565d0000ac420000ec4200006c49000000000000d8420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
